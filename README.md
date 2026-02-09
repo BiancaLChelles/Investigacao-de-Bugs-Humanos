@@ -1,4 +1,4 @@
-# Human-Bugs-Investigation 
+# Manual de Lógica Assistiva
 
 > **"Uso minhas sombras para iluminar o código, e minhas falhas para construir sistemas."**
 
