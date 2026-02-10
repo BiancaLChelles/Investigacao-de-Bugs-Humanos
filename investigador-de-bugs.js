@@ -31,7 +31,7 @@ const investigarBugHumano = (sintomaDetectado) => {
                 diagnostico: "Processador operando em 100% de capacidade, voltado a somente uma única tarefa.",
                 explicacao: "A atenção está em modo túnel, ignorando alertas de manutenção do corpo.",
                 instrucao: "Agendar alarmes regulares para checagem de sede, fome, cansço e postura. Planejar o 'manejo' da atividade.",
-                frase: "O hiperfoco pode ser quase um superpoder, mas como dizem em homem-aranha, todo poder tem seu preço. \\n SE CUIDE!"
+                frase: "O hiperfoco pode ser quase um superpoder, mas, como dizem em homem-aranha, grandes poderes vem com grandes responsabilidades. \\n SE ORAGANIZE! SE CUIDE!"
             };
 
         case "ruminacao":
