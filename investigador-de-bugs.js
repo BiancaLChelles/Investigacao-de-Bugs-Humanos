@@ -6,7 +6,7 @@
 
 //  AQUI O USUÁRIO NÃO DEVE MEXER
 // Esta é a função principal. O nome 'investigarBugHumano' indica que estamos abrindo uma sessão de diagnóstico técnico sobre o nosso próprio estado.
-const investigarBugHumano = (sintomaDetectado) => {
+const investigarBugHumano = (sintomaDetectado , tempoDecorrido , horarioAtual) => {
 
     // O 'switch' funciona como uma central de triagem. 
     // ele vai receber o que você está sentindo e procurar na lista qual é o protocolo de resolução adequado para aquele caso específico.
@@ -27,13 +27,23 @@ const investigarBugHumano = (sintomaDetectado) => {
             };
 
         case "hiperfoco":
+      // vamos afunilar ainda mais os auxilioas refentes ao hiperfoco
+      //criando possibilidades de analise de horario, tempo de foco, etc
+
+      if ( horarioAtual >= 21 ) {
+       return { diagnostico: "Hiperfoco noturno detectado, cuidado, 'essa produção' pode custar caro amanhã.",
+               explicação: "Neste momento, você esta em foco, porem precisa descansar, comece o processo de transição.",
+               instrução: "Diminua a carga da atividade atual, inicie o planejamento mental de atividades substitutivas e mais relaxantes, se permita descansar",
+               frase: "O hiperfoco é tipo um superpoder, mas você não é o batmam, vai descansar gothan está segura! \\n VOCÊ NÂO È UM MORCEGO!"
+              };
+      } else {
             return {
                 diagnostico: "Processador operando em 100% de capacidade, voltado a somente uma única tarefa.",
                 explicacao: "A atenção está em modo túnel, ignorando alertas de manutenção do corpo.",
                 instrucao: "Agendar alarmes regulares para checagem de sede, fome, cansço e postura. Planejar o 'manejo' da atividade.",
                 frase: "O hiperfoco pode ser quase um superpoder, mas, como dizem em homem-aranha, grandes poderes vem com grandes responsabilidades. \\n SE ORAGANIZE! SE CUIDE!"
             };
-
+      }
         case "ruminacao":
             return {
                 diagnostico: "Loop infinito de processamento de dados passados e/ou futuros.",
