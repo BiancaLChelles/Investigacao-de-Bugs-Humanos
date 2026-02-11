@@ -60,3 +60,19 @@ function tradutorDeSentimentos(sinalFisico, intensidade) {
     }
 }
 
+
+// Testando o sensor ======================================================================================================================================================================
+
+
+
+const meuSentimento = tradutorDeSentimentos("mãos agitadas", 7);
+
+ console.log ( ` 
+    === ANALISANDO SINAIS CORPORAIS ===
+    
+    EMOÇÃO: Neste momento você está sentindo ${meuSentimento.emocao}
+    Lembre-se que esse sentimento também irá passar, assim como todos os outros.
+
+    O QUE FAZER?: ${meuSentimento.instrucao}
+
+    ` ) 
