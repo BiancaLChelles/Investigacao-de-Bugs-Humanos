@@ -87,8 +87,8 @@ const investigarBugHumano = (sintomaDetectado , horarioAtual) => {
 
         // O 'default' é o que acontece quando o sintoma não está na lista.
         // Atualizo a lista de case's continuamente, apartir de experiencias prévias.
-        // Estou trabalhando para que o defaut quase não seja acionado
-        // Afinal, o intuito é criar um código que de respostas e ajude, não um código que tambem não sabe.
+        // Estou trabalhando para que o defaut seja cada vez menos acionado
+        // Afinal, o intuito é criar um código que de respostas e ajude, não um código que tambem não sabe o que está acontecendo.
         
         default:
             return {
@@ -103,8 +103,9 @@ const investigarBugHumano = (sintomaDetectado , horarioAtual) => {
 
 //=================================================================================================================================================
 //  AQUI O USUÁRIO DEVE PREENCHER
-// Dentro dos parênteses abaixo, escreva o que você está sentindo entre as aspas.
-// Exemplo: "fome", "cansaco", "hiperfoco", "ruminacao", etc.
+// Dentro dos parênteses abaixo, escreva o que você está sentindo entre as aspas
+// depois da virgula, coloque o horário desse "sentir"
+// Exemplo: ("fome", 12) - ("cansaco", 15) - ("hiperfoco", 22) - ("ruminacao", 03) - etc.
 
 
 
