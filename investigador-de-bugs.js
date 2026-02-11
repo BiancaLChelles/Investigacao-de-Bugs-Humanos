@@ -101,3 +101,40 @@ const investigarBugHumano = (sintomaDetectado , horarioAtual) => {
 };
 
 
+//=================================================================================================================================================
+//  AQUI O USUÁRIO DEVE PREENCHER
+// Dentro dos parênteses abaixo, escreva o que você está sentindo entre as aspas.
+// Exemplo: "fome", "cansaco", "hiperfoco", "ruminacao", etc.
+
+
+
+const meuStatusAgora = investigarBugHumano("hiperfoco" , 14 );
+
+
+
+//===================================================================================================================================================
+
+
+
+
+
+
+// [AQUI O USUÁRIO NÃO DEVE MEXER]
+// Comando que imprime o resultado na tela do computador.
+
+
+console.log ( `
+    === RELATÓRIO TÉCNICO DE SISTEMA ===
+  
+O QUE ESTÁ ACONTECENDO: ${meuStatusAgora.diagnostico}
+
+POR QUE ISSO ACONTECE: ${meuStatusAgora.explicacao}
+
+O QUE FAZER: ${meuStatusAgora.instrucao}
+
+MENSAGEM:  ${meuStatusAgora.frase}
+
+    `
+
+)
+
