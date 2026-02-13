@@ -7,7 +7,6 @@
 
 
 
-
 function tradutorDeSentimentos(sinalFisico, intensidade) {
    
 
