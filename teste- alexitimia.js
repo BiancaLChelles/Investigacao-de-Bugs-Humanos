@@ -1,9 +1,12 @@
 
+
 // Neste código busco desenvolver um "sensor"
 //  que analise sensações fisicas e traduza em sentimentos
 // o intuito é auxiliar individuos com alexitima 
-// (A alexitimia é um condição neurodivergente onde o individuo possui dificuldade em compreender e detectar as proprias emoções)
+// (A alexitimia é um condição neurodivergente onde o individuo possui dificuldade em compreender ou detectar as proprias emoções)
 // o intuito é ajudar a compreender, identificar , gerir e reagir melhor as proprias emoções
+
+
 
 
 
@@ -50,7 +53,86 @@ function tradutorDeSentimentos(sinalFisico, intensidade) {
                 };
             }
 
-          
+            case "olhar fixo":
+                case  "olhar desligando":
+            if (intensidade >= 6) {
+                return {
+                    emocao: "Dissociação ou Shutdown iminente",
+                    instrucao: "CRITICO: O sistema está tentando desligar para se proteger. Reduza IMEDIATAMENTE as luzes e sons. Não tente processar informações agora."
+                };
+            } else {
+                return {
+                    emocao: "Devaneio ou Processamento em segundo plano",
+                    instrucao: "Seu cérebro está organizando uma alta quantidade de dados. Deixe esse processamento fluir. Se possivel reduza os estimulos, busque voltar para o momemto presente."
+                };
+            }
+
+            case "respiração rápida":
+            if (intensidade >= 7) {
+                return {
+                    emocao: "Sobrecarga Sensorial ou Crise de Ansiedade",
+                    instrucao: "O sistema está em modo 'Luta ou Fuga'. Foque apenas em respirar lentamente (soltar o ar (e os pensamentos) é mais importante que puxar agora)."
+                };
+            } else {
+                return {
+                    emocao: "Inquietude, Nervosismo ou Impaciência",
+                    instrucao: "Seu processamento está acelerado. Tente levantar, se alongar ou caminhar para gastar um pouco dessa energia acumulada."
+                };
+            }
+
+        case "sensibilidade ao som":
+            if (intensidade >= 6) {
+                return {
+                    emocao: "Irritabilidade ou Pré-Meltdown",
+                    instrucao: "Sinal de que uma crise sensorial está proxima. Ative isolamento acústico (fones) ou mude para uma 'sala silenciosa' imediatamente."
+                };
+            } else {
+                return {
+                    emocao: "Foco em ruídos",
+                    instrucao: "Seu sistema de filtragem de ruidos está baixo. Tente colocar um som ambiente, uma musica de conforto ou um ruído branco para mascarar um pouco dos sons externos."
+                };
+            }
+
+        case "pernas agitadas":
+            if (intensidade >= 5) {
+                return {
+                    emocao: "Necessidade de autorregulação (Stimming)",
+                    instrucao: "Energia acumulada detectada. Deixe os movimentos acontecerem, a liberação de energia ajuda a manter o sistema estável."
+                };
+            } else {
+                return {
+                    emocao: "Tédio ou Desatenção",
+                    instrucao: "O sistema precisa de novos estímulos. Troque de tarefa, busque um novo interesse, sua mente está precisando ser utilzada."
+                };
+            }
+
+        case "mãos geladas":
+            if (intensidade >= 6) {
+                return {
+                    emocao: "Medo ou Ansiedade Social",
+                    instrucao: "O foco está no funcionamento vital agora. Aqueça as mãos com água morna, busque conforto, e diminua os estimulos. Vamos enviar um sinal de 'segurança' para o cérebro."
+                };
+            } else {
+                return {
+                    emocao: "Desconforto Ambiental",
+                    instrucao: "Verifique a temperatura do local. Às vezes o bug é físico, não emocional. Você deve estar com frio. Vista um casaco."
+                };
+            }
+
+        case "dificuldade em falar":
+            case "formular frases":
+            if (intensidade >= 8) {
+                return {
+                    emocao: "Esgotamento Verbal (NÃO VERBAL)",
+                    instrucao: "O sistema de linguagem está offline para pevivinir danos com a sobrecarga de energia. Use gestos, textos ou apenas descanse. Nem tudo tem que ser comunicado agora."
+                };
+            } else {
+                return {
+                    emocao: "Cansaço Mental",
+                    instrucao: "Processamento de saída lento. Não se force a falar frases complexas agora. Respostas curtas também são aceitáveis."
+                };
+            }
+
         default:
             return {
                 emocao: "uma Emoção não reconhecida",
@@ -64,7 +146,7 @@ function tradutorDeSentimentos(sinalFisico, intensidade) {
 
 
 
-const meuSentimento = tradutorDeSentimentos("mãos agitadas", 5);
+const meuSentimento = tradutorDeSentimentos("mãos agitadas", 7);
 
  console.log ( ` 
     === ANALISANDO SINAIS CORPORAIS ===
