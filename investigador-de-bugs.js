@@ -1,6 +1,7 @@
 // Este código foi construído como um "Exoesqueleto Mental". 
 // serve para traduzir sensações físicas e mentais que o próprio corpo às vezes não consegue nomear sozinho (como no caso de individuos com Alexitimia).
- 
+
+
 //==============================================================================================================================
 
 //  AQUI O USUÁRIO NÃO DEVE MEXER
